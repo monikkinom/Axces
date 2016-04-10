@@ -1,0 +1,44 @@
+body{
+    padding-top: 150px;
+}
+
+.navbar{
+    padding: 20px;
+}
+
+.navbar-brand{
+    opacity: 1.0;
+}
+
+footer{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.navbar{
+    background-color: #850028;;
+}
+
+
+
+.icon-bar{
+    background: white !important;
+}
+
+.swiper-pagination-bullet-active{
+    background: white;
+}
+
+.navbar{
+    background-color: #850028;;
+}
+.nav>li>a {
+    transition: 0.5s all ease-in-out;
+}
+.nav>li>a:hover {
+
+    text-decoration: none;
+    background-color: rgb(165, 0, 50);
+    border: 1px solid white;
+    color: white;
+}

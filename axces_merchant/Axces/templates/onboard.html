@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block extra_css %}
+
+<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/set1.css"/>
+    <style type="text/css">
+       body {
+           background: rgb(165, 0, 50);
+       }
+    </style>
+
+
+
+{%  endblock %}
+
+{% block body_block %}
+
+    <div class="container col-md-8 col-md-offset-2">
+        <h2>Put in your Axis current account number and we will send you an OTP to your registered Axis mobile number to get you started.</h2>
+        <h3 class="accnoh"></h3>
+        <span class="input input--isao spanacno">
+            <input class="input__field input__field--isao" type="text" id="acno"/>
+            <label class="input__label input__label--isao" for="acno">
+                <span class="input__label-content input__label-content--isao">Account Number</span>
+            </label>
+        </span>
+        <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                data-text="Send OTP" id="sendotp">
+            <span>Send OTP</span>
+        </button>
+        <h3 class="otphelp">OTP has been sent to your registered mobile phone</h3>
+        <span class="input input--isao otpf">
+            <input class="input__field input__field--isao" type="text" id="otp"/>
+            <label class="input__label input__label--isao" for="otp">
+                <span class="input__label-content input__label-content--isao">OTP</span>
+            </label>
+        </span>
+        <button class="loginbtn button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                data-text="Submit" id="login">
+            <span>Submit</span>
+        </button>
+    </div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('.logged-in-divs').remove();
+             $("#navbar-right-append-to").append('<li><a href="/Login"></i>Login to Dashboard</a></li>');
+            $('.loginbtn').hide();
+            $('.otpf').hide();
+            $('.otphelp').hide();
+            $('.accnoh').hide();
+            $('#sendotp').click(function () {
+                $('.spanacno').hide();
+                $(this).hide();
+                $('.accnoh').text("Welcome " + $('#acno').val());
+                $('.accnoh').show('0.5s', 'linear');
+                $('.otphelp').show('0.5s', 'linear');
+                $('.otpf').show('0.5s', 'linear');
+                $('.loginbtn').show('0.5s', 'linear');
+
+            });
+
+            $('#login').click(function () {
+                window.location.href = '/';
+            });
+        });
+
+
+    </script>
+{% endblock %}

@@ -1,0 +1,538 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block extra_css %}
+
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/component.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/set1.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/select.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/ns-default.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/ns-style-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/effect1.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/componentupd.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+
+
+    <div id="ip-container" class="ip-container">
+        <!-- initial header -->
+        <header class="ip-header" style="background-color: #850028; z-index: 1032">
+            <h1 class="ip-logo">
+                <img class="ip-inner" width="20%" aria-labelledby="logo_title"
+                     src="/static/image/icon.png"
+                        >
+
+                </img>
+            </h1>
+
+            <div class="ip-loader">
+                <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg"
+                          d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                    <path id="ip-loader-circle" class="ip-loader-circle"
+                          d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                </svg>
+            </div>
+        </header>
+    </div>
+
+
+{% endblock %}
+{% block body_block %}
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="row swipable">
+            <form class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
+                <h2>Select Axis Payment channels you wish to subscribe to for your Merchant Account?</h2>
+                <ul>
+                    <li>
+                        <input id="cb14" name="cb14" type="checkbox">
+                        <label for="cb14">Internet Banking</label>
+                    </li>
+                    <li>
+                        <input id="cb15" name="cb15" type="checkbox">
+                        <label for="cb15">Credit and Debit Card</label>
+                    </li>
+                    <li>
+                        <input id="cb16" name="cb16" type="checkbox">
+                        <label for="cb16">Mobile Banking</label>
+                    </li>
+                    <li>
+                        <input id="cb17" name="cb17" type="checkbox">
+                        <label for="cb17">Foreign Cards</label>
+                    </li>
+                </ul>
+            </form>
+            <div class="pull-right">
+                <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                        data-text="Next" id="next1">
+                    <span>Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="row swipable">
+            <h1 class="subform-title">Company Details</h1>
+                    <span class="input input--isao spancompanyname">
+                        <input class="input__field input__field--isao" type="text" id="company_name"/>
+                        <label class="input__label input__label--isao" for="company_name">
+                            <span class="input__label-content input__label-content--isao">Company's Name</span>
+                        </label>
+                    </span>
+
+            <div class="cs-select cs-select-div cs-skin-border dropdowncat" id="dropdowncat1">
+                <select class="cs-select cs-skin-border" name="sem" id="category_select">
+                    <option value="" disabled selected>Type of Business</option>
+                    <option value="Merchant Company">Merchant Company</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Business Partner">Business Partner</option>
+                    <option value="Software Trial">Software Trial</option>
+                    <option value="Govt/ Govt Subsidiary">Govt/ Govt Subsidiary</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+                    <span class="input input--isao spanspecify hide1" style="margin-right: 0px">
+                        <input class="input__field input__field--isao" type="text" id="specify"/>
+                        <label class="input__label input__label--isao" for="specify">
+                            <span class="input__label-content input__label-content--isao">Please Specify</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao phone">
+                        <input class="input__field input__field--isao" type="text" id="phone"/>
+                        <label class="input__label input__label--isao" for="phone">
+                            <span class="input__label-content input__label-content--isao">Phone</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao email">
+                        <input class="input__field input__field--isao" type="text" id="email"/>
+                        <label class="input__label input__label--isao" for="email">
+                            <span class="input__label-content input__label-content--isao">Email</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanstreet1">
+                        <input class="input__field input__field--isao" type="text" id="street1"/>
+                        <label class="input__label input__label--isao" for="street1">
+                            <span class="input__label-content input__label-content--isao">Street Address 1</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanstreet2">
+                        <input class="input__field input__field--isao" type="text" id="street2"/>
+                        <label class="input__label input__label--isao" for="street2">
+                            <span class="input__label-content input__label-content--isao">Street Address 2 </span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spancity">
+                        <input class="input__field input__field--isao" type="text" id="city"/>
+                        <label class="input__label input__label--isao" for="city">
+                            <span class="input__label-content input__label-content--isao">City</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanpin">
+                        <input class="input__field input__field--isao" type="text" id="pin"/>
+                        <label class="input__label input__label--isao" for="pin">
+                            <span class="input__label-content input__label-content--isao">Pin</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanstate">
+                        <input class="input__field input__field--isao" type="text" id="state"/>
+                        <label class="input__label input__label--isao" for="state">
+                            <span class="input__label-content input__label-content--isao">State</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spancountry">
+                        <input class="input__field input__field--isao" type="text" id="country"/>
+                        <label class="input__label input__label--isao" for="country">
+                            <span class="input__label-content input__label-content--isao">Country</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanurl">
+                        <input class="input__field input__field--isao" type="text" id="url"/>
+                        <label class="input__label input__label--isao" for="url">
+                            <span class="input__label-content input__label-content--isao">Website Url</span>
+                        </label>
+                    </span>
+                    <span class="input input--isao spanacno">
+                        <input class="input__field input__field--isao" type="text" id="acno"/>
+                        <label class="input__label input__label--isao" for="acno">
+                            <span class="input__label-content input__label-content--isao">Account Number</span>
+                        </label>
+                    </span>
+
+            <div class="row">
+                <div class="pull-left">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Previous">
+                        <span>Previous</span>
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Next" id="next2">
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="row swipable">
+            <h1 class="subform-title">Owner Details</h1>
+                    <span class="input input--isao spanownername">
+                        <input class="input__field input__field--isao" type="text" id="owner_name"/>
+                        <label class="input__label input__label--isao" for="owner_name">
+                            <span class="input__label-content input__label-content--isao">Owner's Name</span>
+                        </label>
+                    </span>
+            <img id="uploadimage" class="pull-right" src="/static/image/uploadimg.png">
+                        <span class="input input--isao phone1">
+                            <input class="input__field input__field--isao" type="text" id="phone1" data-toggle="tooltip"
+                                   data-placement="top"/>
+                            <label class="input__label input__label--isao" for="phone1">
+                                <span class="input__label-content input__label-content--isao">Phone</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao pan">
+                            <input class="input__field input__field--isao" type="text" id="pan" data-toggle="tooltip"
+                                   data-placement="top"/>
+                            <label class="input__label input__label--isao" for="pan">
+                                <span class="input__label-content input__label-content--isao">Pan Number</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spanstreet1">
+                            <input class="input__field input__field--isao" type="text" id="street1"/>
+                            <label class="input__label input__label--isao" for="street1">
+                                <span class="input__label-content input__label-content--isao">Street Address 1</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spanstreet2">
+                            <input class="input__field input__field--isao" type="text" id="street2"/>
+                            <label class="input__label input__label--isao" for="street2">
+                                <span class="input__label-content input__label-content--isao">Street Address 2 </span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spancity">
+                            <input class="input__field input__field--isao" type="text" id="city"/>
+                            <label class="input__label input__label--isao" for="city">
+                                <span class="input__label-content input__label-content--isao">City</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spanpin">
+                            <input class="input__field input__field--isao" type="text" id="pin"/>
+                            <label class="input__label input__label--isao" for="pin">
+                                <span class="input__label-content input__label-content--isao">Pin</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spanstate">
+                            <input class="input__field input__field--isao" type="text" id="state"/>
+                            <label class="input__label input__label--isao" for="state">
+                                <span class="input__label-content input__label-content--isao">State</span>
+                            </label>
+                        </span>
+                        <span class="input input--isao spancountry">
+                            <input class="input__field input__field--isao" type="text" id="country"/>
+                            <label class="input__label input__label--isao" for="country">
+                                <span class="input__label-content input__label-content--isao">Country</span>
+                            </label>
+                        </span>
+
+            <div class="row">
+                <div class="pull-left">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Previous">
+                        <span>Previous</span>
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Next" id="next3">
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <input type="file" id="fakeupd" class="hidden" accept="image/*">
+    </div>
+    <div class="swiper-slide">
+        <div class="row swipable">
+            <h1 class="subform-title">Other Bussiness Information</h1>
+
+            <div class="cs-select cs-select-div cs-skin-border dropdownconst" id="dropdownconst1">
+                <select class="cs-select cs-skin-border" name="sem" id="const_select">
+                    <option value="" disabled selected>Constitution</option>
+                    <option value="Individual">Individual</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Trust">Trust</option>
+                    <option value="Private Company">Private Company</option>
+                    <option value="Public Company">Public Company</option>
+                    <option value="Sole Proprieter">Sole Proprieter</option>
+                    <option value="HUF">HUF</option>
+                    <option value="Government">Government</option>
+                    <option value="Society">Society</option>
+                    <option value="Association of Persons">Association of Persons</option>
+                </select>
+            </div>
+            <form class="ac-custom ac-checkbox ac-checkmark noncenter" autocomplete="off">
+                <h3>What is your business planning on selling. Please select appropriate categories</h3>
+                <ul class="small">
+                    <div class="row">
+                        <li class="multicheck">
+                            <input id="cb24" name="cb24" type="checkbox">
+                            <label for="cb24">Fashion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        </li>
+                        <li class="multicheck">
+                            <input id="cb25" name="cb25" type="checkbox">
+                            <label
+                                    for="cb25">Electronics</label>
+                        </li>
+                    </div>
+                    <div class="row">
+                        <li class="multicheck">
+                            <input id="cb26" name="cb26" type="checkbox">
+                            <label for="cb26">Furniture&nbsp;&nbsp;</label>
+                        </li>
+                        <li class="multicheck">
+                            <input id="cb27" name="cb27" type="checkbox">
+                            <label for="cb27">Travel</label>
+                        </li>
+                    </div>
+                    <div class="row">
+                        <li class="multicheck">
+                            <input id="cb28" name="cb28" type="checkbox">
+                            <label for="cb28">Sports&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        </li>
+                        <li class="multicheck">
+                            <input id="cb29" name="cb29" type="checkbox">
+                            <label for="cb29">Toys</label>
+                        </li>
+                    </div>
+                </ul>
+            </form>
+            <form class="ac-custom ac-checkbox ac-checkmark noncenter" autocomplete="off">
+                <h3>Will you be selling scheduled medicines or drugs?</h3>
+                <ul class="small">
+                    <li class="multicheck">
+                        <input id="cb34" name="cb34" type="checkbox">
+                        <label for="cb34">Yes</label>
+                    </li>
+                </ul>
+            </form>
+            <form class="ac-custom ac-checkbox ac-checkmark noncenter" autocomplete="off">
+                <h3>Will you be selling biohazard chemicals?</h3>
+                <ul class="small">
+                    <li class="multicheck">
+                        <input id="cb44" name="cb44" type="checkbox">
+                        <label for="cb44">Yes</label>
+                    </li>
+                </ul>
+            </form>
+            <form class="ac-custom ac-checkbox ac-checkmark noncenter" autocomplete="off">
+                <h3>Will you be selling weapons?</h3>
+                <ul class="small">
+                    <li class="multicheck">
+                        <input id="cb34" name="cb34" type="checkbox">
+                        <label for="cb34">Yes</label>
+                    </li>
+                </ul>
+            </form>
+            <div class="row">
+                <div class="pull-left">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Previous">
+                        <span>Previous</span>
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Next" id="next4">
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="row swipable">
+            <h1 class="subform-title">Technical Details</h1>
+                <span class="input input--isao startpointspan">
+                    <input class="input__field input__field--isao"
+                           type="text" id="startpoint"/>
+                    <label class="input__label input__label--isao"
+                           for="startpoint">
+                        <span class="input__label-content input__label-content--isao">Start Point URL</span>
+                    </label>
+                </span>
+                <span class="input input--isao spanreturnurl">
+                    <input class="input__field input__field--isao"
+                           type="text" id="returnurl"/>
+                    <label class="input__label input__label--isao"
+                           for="returnurl">
+                        <span class="input__label-content input__label-content--isao">Callback Return URL</span>
+                    </label>
+                </span>
+
+            <div class="cs-select cs-select-div cs-skin-border dropdownos" id="dropdownos1">
+                <select class="cs-select cs-skin-border" name="sem" id="os_select">
+                    <option value="" disabled selected>Type of Operating System</option>
+                    <option value="Windows">Windows</option>
+                    <option value="Mac OSX">Mac OSX</option>
+                    <option value="Linux - Debian">Linux - Debian</option>
+                    <option value="Solaris">Solaris</option>
+                    <option value="Linux - RedHat">Linux - RedHat</option>
+                    <option value="Linux - Fedora">Linux - Fedora</option>
+                </select>
+            </div>
+            <span class="input input--isao osversionspan">
+                <input class="input__field input__field--isao"
+                       type="text" id="osversion"/>
+                <label class="input__label input__label--isao"
+                       for="osversion">
+                    <span class="input__label-content input__label-content--isao">Operating System version</span>
+                </label>
+            </span>
+
+            <div class="cs-select cs-select-div cs-skin-border dropdownlang" id="dropdownlang1">
+                <select class="cs-select cs-skin-border" name="sem" id="lang_select">
+                    <option value="" disabled selected>Language for Development Kit</option>
+                    <option value="Java">Java</option>
+                    <option value="ASP .Net">ASP .Net</option>
+                    <option value="Python">Python</option>
+                    <option value="PHP">PHP</option>
+                    <option value="ASPX">ASPX</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="pull-left">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Previous">
+                        <span>Previous</span>
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Next" id="next5">
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="swiper-slide">
+        {#    File upload#}
+        <div class="row swipable">
+            <h1 class="subform-title">Upload your Documents </h1>
+
+            <div class="row tp" style="width:100%;text-align: center; display: inline-block; margin-top: 50px;">
+                <h4>Pan Card</h4>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address Proof</h4>
+                <h4>Tan Card</h4>
+            </div>
+
+            <div class="row" style="margin: 0 auto;margin-bottom: 50px;">
+
+
+                <div class="box">
+                    <input type="file" name="file-6[]" id="file-6" class="inputfile inputfile-5"
+                           data-multiple-caption="{count} files selected" multiple="">
+                    <label for="file-6" class="big-box">
+                        <figure class="bigbox">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                            </svg>
+                        </figure>
+                        <span></span></label>
+                </div>
+
+                <div class="box ">
+                    <input type="file" name="file-6[]" id="file-7" class="inputfile inputfile-5"
+                           data-multiple-caption="{count} files selected" multiple="">
+                    <label for="file-7" class="big-box">
+                        <figure class="bigbox">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                            </svg>
+                        </figure>
+                        <span></span></label>
+                </div>
+
+
+                <div class="box ">
+                    <input type="file" name="file-6[]" id="file-8" class="inputfile inputfile-5"
+                           data-multiple-caption="{count} files selected" multiple="">
+                    <label for="file-8" class="big-box">
+                        <figure class="bigbox">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                            </svg>
+                        </figure>
+                        <span></span></label>
+                </div>
+
+
+            </div>
+
+            <center>
+                <img width="80%" src="/static/image/table.png" style="margin-top: 40px; margin-bottom: 30px;">
+            </center>
+
+            <form class="ac-custom ac-checkbox ac-checkmark noncenter" autocomplete="off" style="margin-bottom: 50px;">
+
+                <ul class="small">
+                    <li class="">
+                        <input id="acc" name="acc" type="checkbox">
+                        <label for="acc">I acccept the Terms of Services and above mentioned Charges.</label>
+                    </li>
+                </ul>
+            </form>
+
+            <div class="row">
+                <div class="pull-left">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Previous">
+                        <span>Previous</span>
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="button button--rayen button--border-medium button--text-thin button--size-l button--inverted"
+                            data-text="Submit" id="submitbtn">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+
+    </div>
+
+
+
+{% endblock %}
+{% block extra_js %}
+    <script src="/static/js/modernizr.custom.js"></script>
+    <script src="/static/js/svgcheckbx.js"></script>
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/select.js"></script>
+    <script src="/static/js/notificationFx.js"></script>
+    <script src="/static/js/select.js"></script>
+    <script src="/static/js/pathLoader.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/custom-file-input.js"></script>
+    <script src="/static/js/swiper.min.js"></script>
+    <script src="/static/js/swiper.jquery.min.js"></script>
+    <script src="/static/js/authentication.js"></script>
+
+    <script src="/static/js/index.js"></script>
+
+
+
+{% endblock %}

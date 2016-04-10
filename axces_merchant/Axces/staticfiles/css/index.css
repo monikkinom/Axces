@@ -1,0 +1,191 @@
+body{
+    background-color: rgb(165,0,50);
+}
+
+.subform-title{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 3em;
+}
+
+.input{
+    max-width: 47%;
+
+}
+
+.spancompanyname{
+    max-width: 100%;
+    display: block!important;
+
+}
+
+.spanownername{
+    max-width: 60%;
+    display: inline-block!important;
+}
+.cs-select-div{
+    display: block!important;
+}
+
+.cs-options {
+    outline: 2px solid white;
+    font-size: 0.8em !important;
+}
+.cs-skin-border {
+ border: 1px solid white;
+    background: transparent;
+}
+
+.dropdowncat{
+    margin-top: 50px;
+    margin-left: 20px;
+    display: inline-block!important;
+
+}
+
+.spanspecify{
+    max-width: 48%;
+    margin-left: 20px;
+}
+
+.hide1{
+    visibility: hidden;
+
+}
+
+.show1{
+    margin-top: 50px;
+}
+
+div.cs-select{
+    /*max-width: 47%;*/
+
+}
+
+.phone1, .pan{
+    max-width: 30%;
+}
+
+#uploadimage{
+    border: 3px solid #a0a0a0;
+    margin-right: 5%;
+    width : 15%;
+    cursor: pointer;
+}
+
+.dropdownos{
+    margin-top: 50px;
+    margin-left: 20px;
+    display: inline-block!important;
+
+}
+
+
+.dropdownlang{
+
+    margin-top: 50px;
+    margin-left: 20px;
+    display: inline-block!important;
+    margin-bottom: 30px;
+
+}
+
+
+.osversionspan{
+    margin-top: 50px;
+    max-width: 47%;
+    margin-left: 20px;
+}
+
+.multicheck{
+    display: inline-block!important;
+    margin: 4%!important;
+    max-width: 42%!important;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+.noncenter {
+    margin: 0;
+    text-align: left;
+}
+
+#dropdownconst1{
+    margin: 50px;
+}
+
+
+
+
+.ns-box{
+    z-index: 1031;
+    font-size: 1.5em;
+    color: #850028;
+}
+.box{
+    text-align: center;
+}
+
+.tp>h4 {
+    display: inline-block;
+    width: 33%;
+}
+
+label>span{
+    color:white;
+}
+
+.tooltip{
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.swipable{
+    padding: 5%!important;
+}
+
+.tab-content{
+    margin-top: 2em;
+    padding-left : 1em;
+    padding-right: 1em;
+    font-size: 1.5em;
+}
+
+ul.nav.nav-pills > li > a {
+    font-size: 1.5em;
+}
+
+.stat-box{
+    color: black;
+}
+
+.card-content{
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.72);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.72);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.72);
+    background-color: white;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.card-main{
+    font-size : 4em;
+    color: #333333;
+}
+
+.card-main2{
+    font-size : 2em;
+    color: #333333;
+}
+
+.table-responsive{
+    background-color: #ffffff;
+    border-radius: 2px;
+    color: black;
+    padding: 1em;
+}
+
