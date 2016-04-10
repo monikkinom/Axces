@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block list %}
+
+    <script type="text/javascript">
+        $(function() {
+    $( ".pc-container" ).sortable({
+        items : '.lolz'
+    });
+    $( ".pc-container" ).disableSelection();
+  });
+
+    $(function(){
+
+        $("#add-validation").click(function(){
+            $(".form-stuff").append('<div class="row"><div class="col-md-6"> <div class="input-group"> <input type="text" class="form-control" placeholder="Risk Keyword" aria-describedby="basic-addon2"> <span class="input-group-addon" id="basic-addon2">Keyword</span> </div> </div> <div class="col-md-6"> <div class="input-group"> <input type="text" class="form-control" placeholder="Risk Percentage" aria-describedby="basic-addon2"> <span class="input-group-addon" id="basic-addon2">/ 100 </span> </div> </div> <hr> </div>')});
+
+        $("#remove-validation").click(function(){
+            $(".form-stuff .row:last").remove();
+        });
+
+
+    });
+
+    </script>
+
+    <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Form Management <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="/merchant_form_1/">Merchant Form</a>
+                            </li>
+                            <li>
+                                <a href="#">Extra Form 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/upload_from_partners/"><i class="fa fa-fw fa-bar-chart-o"></i> Upload from Partners</a>
+                    </li>
+                    <li class="active">
+                        <a href="/review/"><i class="fa fa-fw fa-table"></i> Review Pending High Risk</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Accepted Accounts</a>
+                    </li>
+                    <li>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Archived / Rejected Accounts</a>
+                    </li>
+                </ul>
+
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">
+    Review Flagged Accounts
+    </h1>
+    <table class="table table-striped">
+        <thead> <tr>
+            <th>#</th>
+            <th>Merchant Name</th>
+            <th>Merchant Website</th>
+            <th>Merchant Services</th>
+            <th>Form filed</th>
+            <th>Full Report</th>
+        </tr> </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark Roson</td>
+            <td><a href="http://ottavan.com">http://ottovan.com<a/></td>
+            <td>Buying Cars</td>
+            <td><i>23rd April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Zane lo</td>
+            <td><a href="http://etsy.com">http://etsy.com<a/></td>
+            <td>Furniture</td>
+            <td><i>21st April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Zimmerman</td>
+            <td><a href="http://etsy.com">http://buyammunition.com<a/></td>
+            <td>Guns and Explosives</td>
+            <td><i>20th April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Mark Roson</td>
+            <td><a href="http://ottavan.com">http://ottovan.com<a/></td>
+            <td>Buying Cars</td>
+            <td><i>23rd April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Zane lo</td>
+            <td><a href="http://etsy.com">http://etsy.com<a/></td>
+            <td>Furniture</td>
+            <td><i>21st April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Zimmerman</td>
+            <td><a href="http://etsy.com">http://buyammunition.com<a/></td>
+            <td>Guns and Explosives</td>
+            <td><i>20th April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>Mark Roson</td>
+            <td><a href="http://ottavan.com">http://ottovan.com<a/></td>
+            <td>Buying Cars</td>
+            <td><i>23rd April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td>Zane lo</td>
+            <td><a href="http://etsy.com">http://etsy.com<a/></td>
+            <td>Furniture</td>
+            <td><i>21st April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>Zimmerman</td>
+            <td><a href="http://etsy.com">http://buyammunition.com<a/></td>
+            <td>Guns and Explosives</td>
+            <td><i>20th April, 2016</i></td>
+            <td><a href="/review_individual/">Here</a> </td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

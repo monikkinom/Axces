@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block list %}
+
+    <script type="text/javascript">
+        $(function() {
+    $( ".pc-container" ).sortable({
+        items : '.lolz'
+    });
+    $( ".pc-container" ).disableSelection();
+  });
+
+    $(function(){
+
+        $("#add-validation").click(function(){
+            $(".form-stuff").append('<div class="row"><div class="col-md-6"> <div class="input-group"> <input type="text" class="form-control" placeholder="Risk Keyword" aria-describedby="basic-addon2"> <span class="input-group-addon" id="basic-addon2">Keyword</span> </div> </div> <div class="col-md-6"> <div class="input-group"> <input type="text" class="form-control" placeholder="Risk Percentage" aria-describedby="basic-addon2"> <span class="input-group-addon" id="basic-addon2">/ 100 </span> </div> </div> <hr> </div>')});
+
+        $("#remove-validation").click(function(){
+            $(".form-stuff .row:last").remove();
+        });
+
+
+    });
+
+    </script>
+
+    <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Form Management <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="/merchant_form_1/">Merchant Form</a>
+                            </li>
+                            <li>
+                                <a href="#">Extra Form 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/upload_from_partners/"><i class="fa fa-fw fa-bar-chart-o"></i> Upload from Partners</a>
+                    </li>
+                    <li class="active">
+                        <a href="/review/"><i class="fa fa-fw fa-table"></i> Review Pending High Risk</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Accepted Accounts</a>
+                    </li>
+                    <li>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Archived / Rejected Accounts</a>
+                    </li>
+                </ul>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="page-header text-center">
+    <h2>Review Flagged Application</h2>
+    </div>
+
+    <div class="row">
+    <div class="col-md-12">
+
+        <div class="panel panel-default">
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Primary Details</h3>
+          </div>
+                 <ul class="list-group">
+                      <li class="list-group-item"><span class="detail-title">Merchant Name</span> : </li>
+                      <li class="list-group-item"><span class="detail-title">Business Name</span> : March 2, 2016</li>
+                      <li class="list-group-item"><span class="detail-title">Website</span> : http://etsy.com</li>
+                      <li class="list-group-item"><span class="detail-title">Top keywords from website</span> : Furniture, wood, bags, artwork, decorative</li>
+                      <li class="list-group-item"><span class="detail-title">Total sales volume </span>: 29384</li>
+                      <li class="list-group-item"><span class="detail-title">Total revenue (yearly) </span>: Rs 2345934</li>
+                 </ul>
+
+            </div>
+
+        <button class="btn btn-success btn-block">
+            Mark as safe
+        </button>
+        <button class="btn btn-danger btn-block">
+            Mark as danger
+        </button>
+
+
+    </div>
+    </div>
+
+{% endblock %}
